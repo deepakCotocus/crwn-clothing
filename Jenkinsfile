@@ -12,5 +12,13 @@ pipeline {
                 //}
             }
         }
+        stage ('push artifact') {
+            steps {
+                sh 'mkdir archive'
+                //sh 'echo build > archive'
+                zip zipFile: 'build.zip', archive: false, dir: 'build'
+                archiveArtifacts artifacts: 'build.zip', fingerprint: true
+            }
+        }
     }
 }
