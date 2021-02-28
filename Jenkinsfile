@@ -14,10 +14,8 @@ pipeline {
         }
         stage ('push artifact') {
             steps {
-                sh 'sshpass -p "Nist@1234N" rm -rf C:/xampp/htdocs/crown-clothing deepa@LAPTOP-8GT6R825
-'
-                sh 'sshpass -p "Nist@1234N" scp -r build deepa@LAPTOP-8GT6R825:C:/xampp/htdocs/crown-clothing
-'
+                sh 'sshpass -p "Nist@1234N" rm -rf C:/xampp/htdocs/crown-clothing deepa@LAPTOP-8GT6R825'
+                sh 'sshpass -p "Nist@1234N" scp -r build deepa@LAPTOP-8GT6R825:C:/xampp/htdocs/crown-clothing'
             }
         }
     }
