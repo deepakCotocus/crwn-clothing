@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('installation') {
             steps {
-                sh 'npm install'
+                scripts {
+                    """sh npm install"""
+                }
             }
         }
     }
